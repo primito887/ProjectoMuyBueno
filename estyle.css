@@ -1,6 +1,11 @@
 body{
     background:#5793ce;
-    width: 200px;
+    width: 500px;
+    
+}
+.img{
+ background-image:url(https://static.vecteezy.com/system/resources/previews/017/178/876/non_2x/doodle-freehand-drawing-of-middle-east-countries-map-free-png.png) ;
+ background-size: 50%;
 }
 nav{
     width: 200px;
