@@ -1,75 +1,14 @@
 body{
-    background:#5793ce;
-    width: 500px;
+    background-color: antiquewhite;
+    width: 300px;
     
 }
 .img2{
 
  background-size: 50%;
- position: absolute;
- top: 100px;
- left: 10px;
 }
-
- 
-.i1 {
-    background-image: url("https://icones.pro/wp-content/uploads/2021/06/icone-du-monde-bleu.png");
-  height: 05%;
-  width: 05%;
-  position: absolute;
-  top: 10px;
-  left: 0px;
-}
-
-
 nav{
     width: 200px;
     height: 100px;
     background-color: #70b7c7;
 }
-button{
-    color: black;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    
-}
-
-.button7{
-    position: absolute;
-    top: 450px;
-    left: 330px;
-}
-.button6{
-    position: absolute;
-   top: 200px;
-   left: 150px;
-}
-.button5{
-  position: absolute;
-  top: 700px;
-  left: 50px;
-
-}
-.button4{
-    position: absolute;
-   top: 700px;
-   left: 400px;
-}
-.button3{
-position: absolute;
-top: 400px;
-left: 450px;
-}
-.button2{
-    position: absolute;
-    left: 600px;
-    top: 300px;
-}
-.button1{
-    position: absolute;
-    top: 340px;
-    left:370px;
-}
-
- 
