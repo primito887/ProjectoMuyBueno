@@ -68,7 +68,7 @@ body {
     border-radius: 0px;
 }
 
-/* Estilos por país */
+
 .turquia      { width: 100px; height: 60px;  top: 50px;  left: 100px; }
 .siria        { width: 80px;  height: 70px;  top: 150px; left: 280px; }
 .irak         { width: 150px; height: 80px;  top: 250px; left: 330px; }
@@ -79,7 +79,7 @@ body {
 .iran         { width: 200px; height: 150px; top: 150px; left: 500px; }
 .ArabiaSaudita{ width: 200px; height: 200px; top: 350px; left: 350px; }
 
-/* Botón */
+
 button {
     background: transparent;
     color: white;
@@ -93,4 +93,9 @@ button {
 
 button:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+.p{
+    position: absolute;
+    top: 900px;
+    left: 600px;
 }
