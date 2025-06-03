@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>registro nacer</title>
+  <style>
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: backgroundMove 20s ease infinite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      padding: 3rem;
+    }
+  
+    @keyframes backgroundMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+  
+
+    .contenedor-formulario {
+      width: 90%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 25px;
+      padding: 3rem;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 20px rgba(0, 255, 128, 0.3);
+      animation: aura 6s ease-in-out infinite alternate;
+      margin-bottom: 3rem;
+    }
+  
+    @keyframes aura {
+      0% { box-shadow: 0 0 20px rgba(0, 255, 128, 0.4); }
+      100% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.6); }
+    }
+  
+    .titulo-formulario {
+      text-align: center;
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+  
+    .grupo-input {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .grupo-input input,
+    .grupo-input select {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #ffffff;
+      padding: 0.7rem;
+      color: #ffffff;
+      font-size: 1.1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+  
+    .grupo-input input:focus,
+    .grupo-input select:focus {
+      border-bottom: 2px solid #00ffaa;
+      transform: scale(1.05);
+    }
+  
+    .texto-confirmacion {
+      text-align: center;
+      color: #ffffff;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .boton-confirmar {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(45deg, #00ffaa, #0077ff);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.4s ease, transform 0.3s ease;
+    }
+  
+    .boton-confirmar:hover {
+      background: linear-gradient(45deg, #0077ff, #073626);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffaa;
+    }
+  
+   
+    .flecha-abajo {
+      position: absolute;
+      bottom: 20px;
+      font-size: 2rem;
+      color: #00ffaa;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+  
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .back-arrow {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 3;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #466f58;
+      background: #ffffffcc;
+      padding: 8px 12px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+
+    .back-arrow:hover {
+      background: #dcdbcb;
+    }
+
+
+   
+.grupo-input select {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  padding: 0.5rem;
+  color: #ffffff; 
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+
+.grupo-input select:focus {
+  border-bottom: 2px solid #00ffff;
+  transform: scale(1.03);
+}
+
+.grupo-input select option {
+  background: #1f1c2c; 
+  color: #ffffff;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+
+.grupo-input select:focus option {
+  background: #3f3a5a; 
+}
+  
+  </style>
+  
+</head>
+<body>
+ 
+  
+
+
+
+  <div class="contenedor-formulario">
+    <form action="guardar_partida.php" method="POST" class="formulario-registro">
+  
+      <h2 class="titulo-formulario">ÚNETE AHORA</h2>
+  
+      <div class="grupo-input">
+        <input type="text" name="padres" placeholder="padres del niño" required>
+      </div>
+  
+      <div class="grupo-input">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+      </div>
+  
+      <div class="grupo-input">
+        <input type="text" name="sexo" placeholder="sexo de nacido" required>
+      </div>
+  
+      <div class="grupo-input">
+        <input type="text" name="telefono" placeholder="Teléfono encargados (8 dígitos)" pattern="[0-9]{8}" required>
+      </div>
+  
+      <div class="grupo-input">
+        <input type="text" name="Nacionalidad" placeholder="Nacionalidad" required>
+      </div>
+  
+      <div class="grupo-input">
+        <select name="grado" required>
+          <option value="" disabled selected>🎓 Selecciona tu lugar de nacimiento</option>
+          <option value="1b">Hospital</option>
+          <option value="2b">casa</option>
+          <option value="3b">hotel</option>
+          <option value="4b">manicomio</option>
+          <option value="4p">establo</option>
+          <option value="5b">casa hogar</option>
+          <option value="5p">institucion de sanidad</option>
+          <option value="6p">parque</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+  
+      <div class="grupo-input">
+        <input type="text" name="hora" placeholder="hora y fecha de nacimiento" minlength="5" maxlength="20" required>
+      </div>    
+  
+      <div class="confirmacion">
+        <p class="texto-confirmacion">🚀 ¡Listo para nacer!</p>
+        <button type="submit" class="boton-confirmar">CREAR VIDA</button>
+        
+      </div>
+  
+    </form>
+  </div>
+  <canvas id="particles-js" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></canvas>
+
+<script>
+const canvas = document.getElementById('particles-js');
+const ctx = canvas.getContext('2d');
+let particlesArray;
+let mouse = {
+  x: null,
+  y: null
+}
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener('resize', function(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  init();
+})
+
+window.addEventListener('mousemove', function(event){
+  mouse.x = event.x;
+  mouse.y = event.y;
+})
+
+function Particle(x, y, directionX, directionY, size, color){
+  this.x = x;
+  this.y = y;
+  this.directionX = directionX;
+  this.directionY = directionY;
+  this.size = size;
+  this.color = color;
+}
+
+Particle.prototype.draw = function(){
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+  ctx.fillStyle = this.color;
+  ctx.fill();
+}
+
+Particle.prototype.update = function(){
+  let dx = mouse.x - this.x;
+  let dy = mouse.y - this.y;
+  let distance = Math.sqrt(dx * dx + dy * dy);
+
+  if (distance < 100){
+    if (mouse.x < this.x && this.x < canvas.width - this.size * 10){
+      this.x += 1;
+    }
+    if (mouse.x > this.x && this.x > this.size * 10){
+      this.x -= 1;
+    }
+    if (mouse.y < this.y && this.y < canvas.height - this.size * 10){
+      this.y += 1;
+    }
+    if (mouse.y > this.y && this.y > this.size * 10){
+      this.y -= 1;
+    }
+  }
+
+
+  if (this.x + this.size > canvas.width || this.x - this.size < 0){
+    this.directionX = -this.directionX;
+  }
+  if (this.y + this.size > canvas.height || this.y - this.size < 0){
+    this.directionY = -this.directionY;
+  }
+
+  this.x += this.directionX * 0.5; 
+  this.y += this.directionY * 0.5;
+
+  this.draw();
+}
+
+function init(){
+  particlesArray = [];
+  let numberOfParticles = (canvas.height * canvas.width) / 9000;
+  for (let i = 0; i < numberOfParticles; i++){
+    let size = (Math.random() * 3) + 1;
+    let x = Math.random() * (innerWidth - size * 2);
+    let y = Math.random() * (innerHeight - size * 2);
+    let directionX = (Math.random() * 0.6) - 0.3;
+    let directionY = (Math.random() * 0.6) - 0.3;
+    let color = 'rgba(255,255,255,0.7)';
+
+    particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+  }
+}
+
+function animate(){
+  requestAnimationFrame(animate);
+  ctx.clearRect(0,0,innerWidth, innerHeight);
+
+  for (let i = 0; i < particlesArray.length; i++){
+    particlesArray[i].update();
+  }
+}
+
+init();
+animate();
+</script>
+<a href="proyecto.html" class="back-arrow">← Volver</a>
+
+</body>
+</html>
