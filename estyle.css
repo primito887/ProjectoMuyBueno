@@ -70,3 +70,20 @@
         .egipto { width: 80px; height: 100px; top: 290px; left: 60px; }
         .iran { width: 200px; height: 150px; top: 150px; left: 500px; }
         .ArabiaSaudita { width: 200px; height: 200px; top: 350px; left: 350px; }
+         button {
+      background-color: rgb(255, 0, 0); 
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: red; 
+    }
+    .libaimg{
+        border: 5px,5px;
+    }

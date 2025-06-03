@@ -1,0 +1,22 @@
+body{
+  animation: cambioFondo 9s infinite;
+  transition: background-color 5s ease-in-out;}
+    @keyframes cambioFondo {
+  0%   { background-color: green; }
+  33%  { background-color: white; }
+  66%  { background-color: red; }
+  100% { background-color: green; } 
+    }
+button {
+      background-color: #00e88b; 
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+      button:hover {
+      background-color: #b30000; 
+    } 
