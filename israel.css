@@ -1,0 +1,42 @@
+.video{
+    position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.conteit {
+    position: relative;
+    top: 30%;
+    z-index: 2;
+    margin:0 auto;
+    text-align: center;
+    width: 720px;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+div {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+.navegador {
+  position: relative;
+  z-index: 2; 
+}
+.navegador {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
