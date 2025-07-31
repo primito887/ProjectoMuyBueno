@@ -1,42 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arabia Saudita - Tierra de Maravillas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saudigreen: '#245C36',
+                        saudigold: '#C6911A',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+    </style>
 </head>
-<body>
-    <h1>ArabiaSaudita</h1>
-    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: rgb(0, 0, 0);">
-    Historia de arabia Saudita
-La historia de Arabia Saudita es una narrativa compleja de raíces antiguas, unificación y transformación en una nación moderna. Para entenderla mejor, hay que remontarse a tiempos preislámicos y seguir su evolución a través de los siglos.
+<body class="font-sans bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" alt="Bandera Arabia Saudita" class="h-10">
+                    <span class="font-semibold text-gray-900 text-lg">Arabia Saudita</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <button onclick="scrollToSection('inicio')" class="text-saudigreen font-medium hover:text-saudigold transition">Inicio</button>
+                    <button onclick="scrollToSection('destinos')" class="text-gray-600 hover:text-saudigreen transition">Destinos</button>
+                    <button onclick="scrollToSection('cultura')" class="text-gray-600 hover:text-saudigreen transition">Cultura</button>
+                    <button onclick="scrollToSection('visado')" class="text-gray-600 hover:text-saudigreen transition">Visado</button>
+                    <button onclick="scrollToSection('contacto')" class="bg-saudigreen text-white px-4 py-2 rounded-md hover:bg-saudigold transition">Contacto</button>
+                </div>
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white py-2 px-4">
+            <button onclick="scrollToSection('inicio')" class="block w-full text-left py-2 text-saudigreen font-medium">Inicio</button>
+            <button onclick="scrollToSection('destinos')" class="block w-full text-left py-2 text-gray-600">Destinos</button>
+            <button onclick="scrollToSection('cultura')" class="block w-full text-left py-2 text-gray-600">Cultura</button>
+            <button onclick="scrollToSection('visado')" class="block w-full text-left py-2 text-gray-600">Visado</button>
+            <button onclick="scrollToSection('contacto')" class="block w-full text-left py-2 text-saudigreen font-medium">Contacto</button>
+        </div>
+    </nav>
 
-Tiempos preislámicos
-Antes del surgimiento del Islam en el siglo VII, la península arábiga estaba habitada por tribus árabes que vivían en un entorno principalmente nómada y su cultura se centraba en el comercio y las tradiciones tribales. La región, conocida como Arabia, era al mismo tiempo un cruce de rutas comerciales y un espacio de diversas religiones, incluyendo el paganismo, el cristianismo, el judaísmo y el zoroastrismo.
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Descubre Arabia Saudita</h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">Tierra de maravillas antiguas, paisajes espectaculares y una cultura rica y vibrante.</p>
+            <div class="space-x-4">
+                <button onclick="scrollToSection('destinos')" class="bg-saudigold hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Explorar Destinos</button>
+                <button onclick="scrollToSection('visado')" class="bg-transparent border-2 border-white hover:bg-white hover:text-saudigreen text-white font-bold py-3 px-6 rounded-lg transition duration-300">Información de Visado</button>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <button onclick="scrollToSection('destinos')" class="animate-bounce">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
 
-El surgimiento del Islam y su impacto
-A principios del siglo VII, Mahoma fundó el Islam en La Meca, en el año 610 d.C. Su religión, que pronto se expandió por toda la península, tuvo un impacto profundo en la estructura social, política y cultural de Arabia. Tras su muerte en 632, los califas expandieron el Islam por vastas regiones, consolidando la influencia en la península.
+    <!-- Destinos Destacados -->
+    <section id="destinos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-saudigreen mb-4">Destinos Imperdibles</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Explora los lugares más fascinantes del Reino de Arabia Saudita</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1580502304784-8985b7eb7260?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Al-Ula" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-saudigreen mb-2">Al-Ula</h3>
+                        <p class="text-gray-600 mb-4">La joya arqueológica con paisajes desérticos espectaculares y las tumbas nabateas de Hegra.</p>
+                        <button class="text-saudigold font-medium hover:underline">Más información</button>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Riyadh" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-saudigreen mb-2">Riyadh</h3>
+                        <p class="text-gray-600 mb-4">La capital moderna que combina rascacielos futuristas con tradición en el histórico barrio de Diriyah.</p>
+                        <button class="text-saudigold font-medium hover:underline">Más información</button>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1567808291549-f5e0a5b3d0a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Jeddah" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-saudigreen mb-2">Jeddah</h3>
+                        <p class="text-gray-600 mb-4">La puerta a La Meca, con su fascinante casco antiguo y el impresionante paseo marítimo.</p>
+                        <button class="text-saudigold font-medium hover:underline">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Época de los califatos y la influencia religiosa
-Durante los siglos siguientes, Arabia fue parte de diferentes califatos, incluyendo los Omeya y los Abasíes, que fomentaron el florecimiento cultural y económico en ciertos períodos. La región se convirtió en un centro de comercio y conocimiento, particularmente en la ciudad de Bagdad, que aunque estaba en el actual Irak, influyó en toda la cultura árabe.
+    <!-- Cultura y Tradición -->
+    <section id="cultura" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-saudigreen mb-4">Cultura y Tradición</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Sumérgete en la rica herencia cultural de Arabia Saudita</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cultura Saudita" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold text-saudigreen mb-4">Una herencia milenaria</h3>
+                    <p class="text-gray-600 mb-4">Arabia Saudita es la cuna del Islam y guardián de sus dos lugares más sagrados: La Meca y Medina. Su cultura está profundamente arraigada en las tradiciones islámicas y beduinas.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="h-6 w-6 text-saudigold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700">Hospitalidad legendaria y generosidad hacia los invitados</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="h-6 w-6 text-saudigold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700">Arte tradicional como la caligrafía árabe y la danza ardah</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="h-6 w-6 text-saudigold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700">Gastronomía rica con platos como el kabsa y el mandi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-La fragmentación y las tribus independiente
-Tras la caída del califato abasí, la península se fragmentó en varias tribus y pequeños reinos. La autoridad central se debilitó, y las tribus mantenían sus propias leyes y costumbres. La región también fue escenario de conflictos y alianzas cambiantes, en medio de la influencia de potencias como el Imperio Otomano, que en el siglo XVI dominó partes de Arabia, especialmente en el norte.
+    <!-- Información de Visado -->
+    <section id="visado" class="py-20 bg-saudigreen text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Información de Visado</h2>
+                <p class="text-lg max-w-3xl mx-auto">Todo lo que necesitas saber para visitar Arabia Saudita</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="text-4xl font-bold text-saudigold mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-2">Visado Turístico</h3>
+                    <p class="mb-4">Disponible para ciudadanos de más de 50 países. Proceso 100% online con aprobación rápida.</p>
+                    <button class="text-saudigold font-medium hover:underline">Ver requisitos</button>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="text-4xl font-bold text-saudigold mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-2">Visado Umrah</h3>
+                    <p class="mb-4">Para peregrinos que deseen visitar La Meca y Medina fuera del período del Hajj.</p>
+                    <button class="text-saudigold font-medium hover:underline">Más detalles</button>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="text-4xl font-bold text-saudigold mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-2">Visado de Negocios</h3>
+                    <p class="mb-4">Para viajeros que necesiten asistir a reuniones, conferencias o eventos comerciales.</p>
+                    <button class="text-saudigold font-medium hover:underline">Información</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Arabia Saudita: los orígenes de la nación moderna
-El siglo XVIII fue crucial para la historia de Arabia Saudita. En 1744, surgió una alianza entre Muhammad ibn Abd al-Wahhab, un teólogo reformista de la región de Nejd, y Muhammad ibn Saud, líder de la tribu de los saudíes. Esta alianza sentó las bases del movimiento wahabí, una interpretación fundamentalista del Islam que buscaría purgar las prácticas consideradas idólatras y fortalecer una religión estricta.
-Este movimiento llevó a la creación de un Estado Saudí en Nejd, que inicialmente no abarcaba toda la península. Sin embargo, en los siglos posteriores, los saudíes lograron expandirse y consolidar su poder, enfrentándose a otros tribus y a la influencia otomana.
+    <!-- Galería -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-saudigreen mb-12 text-center">Galería de Arabia Saudita</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg h-48">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Desierto" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-48">
+                    <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Arquitectura" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-48">
+                    <img src="https://images.unsplash.com/photo-1567808291549-f5e0a5b3d0a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mar Rojo" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-48">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ciudad" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
 
-La unificación bajo Abdulaziz ibn Saud
-El momento definitorio llegó en 1902 con la captura de Riyad por Abdulaziz ibn Saud, conocido como Ibn Saud, que fue el fundador de la Arabia Saudita moderna. A lo largo de las siguientes décadas, Ibn Saud lideró campañas militares y diplomáticas para unificar el territorio, mediante una serie de conquistas y alianzas.
-En 1932, tras varias décadas de esfuerzo, proclamó la creación del Reino de Arabia Saudita, estableciendo su poder en toda la península. La capital se consolidó en Riyad, y se instituyó una monarquía absolutista basada en la ley islámica.
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-saudigreen mb-4">Contacto</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">¿Tienes preguntas sobre tu viaje a Arabia Saudita? Contáctanos</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-saudigreen text-white p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-4">Información de Contacto</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="h-6 w-6 text-saudigold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Teléfono</p>
+                                    <p>+966 12 345 6789</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <svg class="h-6 w-6 text-saudigold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <p>info@arabiasaudita.turismo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <svg class="h-6 w-6 text-saudigold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Dirección</p>
+                                    <p>Riyadh, Reino de Arabia Saudita</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Nombre</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-saudigold">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-saudigold">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">Mensaje</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-saudigold"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-saudigreen hover:bg-saudigold text-white font-bold py-3 px-4 rounded-lg transition duration-300">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-La economía y el descubrimiento del petróleo
-Durante gran parte del siglo XX, Arabia Saudita mantuvo una economía basada en el comercio tradicional y la agricultura. Sin embargo, la verdadera revolución ocurrió en 1938, cuando se descubrió petróleo en la región de Ghawar. Este recurso convirtió a Arabia Saudita en uno de los mayores productores y exportadores de petróleo del mundo, asegurando su futuro económico.
-</p>
-<div> <img src="https://www.ecured.cu/images/9/9a/Bandera_egipto.png"></div>
-<a href="index.html">
-    <button type="button" class="btnvol">volver</button>
-</a>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-saudigold mb-4">Arabia Saudita</h3>
+                    <p class="text-gray-400">Descubre la tierra de maravillas antiguas y modernas, donde la tradición se encuentra con la innovación.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Explorar</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="scrollToSection('destinos')" class="text-gray-400 hover:text-saudigold transition">Destinos</button></li>
+                        <li><button onclick="scrollToSection('cultura')" class="text-gray-400 hover:text-saudigold transition">Cultura</button></li>
+                        <li><button onclick="scrollToSection('visado')" class="text-gray-400 hover:text-saudigold transition">Visado</button></li>
+                        <li><button onclick="scrollToSection('contacto')" class="text-gray-400 hover:text-saudigold transition">Contacto</button></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><button class="text-gray-400 hover:text-saudigold transition">Términos y Condiciones</button></li>
+                        <li><button class="text-gray-400 hover:text-saudigold transition">Política de Privacidad</button></li>
+                        <li><button class="text-gray-400 hover:text-saudigold transition">Cookies</button></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <button class="text-gray-400 hover:text-saudigold transition">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-saudigold transition">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 3.807.058h.468c2.456 0 2.784-.011 3.807-.058.975-.045 1.504-.207 1.857-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-3.807.058h-.468c-2.456 0-2.784-.011-3.807-.058-.975-.045-1.504-.207-1.857-.344-.467-.182-.8-.398-1.15-.748-.35-.35-.566-.683-.748-1.15-.137-.353-.3-.882-.344-1.857-.047-1.023-.058-1.351-.058-3.807v-.468c0-2.456.011-2.784.058-3.807.045-.975.207-1.504.344-1.857.182-.466.399-.8.748-1.15.35-.35.683-.566 1.15-.748.353-.137.882-.3 1.857-.344 1.023-.047 1.351-.058 3.807-.058z"></path>
+                                <path d="M12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                            </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-saudigold transition">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-saudigold transition">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Arabia Saudita Turismo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Cerrar el menú móvil si está abierto
+            document.getElementById('mobileMenu').classList.remove('active');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
